@@ -1,0 +1,62 @@
+.signup-btn {
+  background: var(--white);
+  color: var(--black) !important;
+  padding: 0.95rem 1.45rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 112px;
+  text-align: center;
+}
+
+.phone-mockup {
+  width: 425px;
+  max-width: none;
+  transform-origin: center;
+  margin-top: 6px;
+  margin-left: -8px;
+}
+
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.store-btn {
+  background: #000000;
+  color: var(--white);
+  border-radius: 14px;
+  padding: 0.95rem 1.28rem;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  white-space: nowrap;
+}
+
+.footer-logo {
+  width: 315px;
+  height: auto;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: -4px;
+}
+
+.social-link {
+  color: var(--white);
+  font-size: 4.2rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
