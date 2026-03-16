@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  padding: 2em 0;
+  padding: 2em;
 }
 
 h1 {
@@ -56,20 +56,15 @@ h2 {
   background-color: #fff;
   border: 2px solid #ddd;
   color: #000;
-}
-
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5em;
-  padding: 0 2em;
-  margin: 0 13em;
+  text-align: center;
 }
 
 .card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5em;
+  margin-bottom: 3em;
 }
 
 img:not(.nav-logo, .footer-logo, .fb, .insta) {
@@ -141,4 +136,19 @@ h3 {
   background-color: #e5b0bc;
   color: #fff;
   padding: 0 2em 1.5em 2em;
+}
+
+@media (width >= 800px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+    padding: 0 2em;
+    margin: 0 13em;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
