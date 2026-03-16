@@ -1,8 +1,5 @@
 "use strict";
 
-// const params = new URLSearchParams(window.location.search);
-// const category = params.get("category");
-
 const peopleContainer = document.querySelector("#peoplelist");
 const filterContainer = document.querySelector(".filters");
 
@@ -62,7 +59,7 @@ function buildFilterUI() {
 
     <button class="filter-reset" id="resetBtn">✕ Reset</button>
   `;
-  // Åbn/luk dropdowns
+
   document.querySelectorAll(".filter-toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const group = btn.dataset.group;
@@ -71,18 +68,15 @@ function buildFilterUI() {
     });
   });
 
-  // Vælg filter
   document.querySelectorAll(".filter-option").forEach((btn) => {
     btn.addEventListener("click", () => {
       const type = btn.dataset.type;
       const value = btn.dataset.value;
 
-      // Toggle: klik samme knap igen = fjern filter
       if (activeFilters[type] === value) {
         activeFilters[type] = null;
         btn.classList.remove("active");
       } else {
-        // Fjern active fra andre knapper i samme gruppe
         document.querySelectorAll(`.filter-option[data-type="${type}"]`).forEach((b) => b.classList.remove("active"));
         activeFilters[type] = value;
         btn.classList.add("active");
@@ -92,7 +86,6 @@ function buildFilterUI() {
     });
   });
 
-  // Nulstil
   document.getElementById("resetBtn").addEventListener("click", () => {
     activeFilters = { eyeColor: null, hairColor: null, ageRange: null };
     document.querySelectorAll(".filter-option").forEach((b) => b.classList.remove("active"));
@@ -100,7 +93,6 @@ function buildFilterUI() {
   });
 }
 
-// Anvend alle aktive filtre
 function applyFilters() {
   let filtered = allPeople;
 
@@ -124,7 +116,6 @@ function applyFilters() {
   showPeople(filtered);
 }
 
-// Vis kort
 function showPeople(peoplearr) {
   if (peoplearr.length === 0) {
     peopleContainer.innerHTML = `<p class="no-results">Ingen matcher fundet. Prøv et andet filter.</p>`;
