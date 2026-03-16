@@ -9,11 +9,29 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/about.css" />
 
     <script src="js/profile.js" defer></script>
   </head>
   <body>
-    <header></header>
+    <header class="header-matches">
+      <nav class="about-nav">
+        <div class="nav-left">
+          <a href="about.html">About</a>
+          <a href="profile.html">Profile</a>
+        </div>
+
+        <div class="nav-center">
+          <a href="index.html">
+            <img src="images/heromatch.png" alt="Match logo" class="nav-logo" />
+          </a>
+        </div>
+
+        <div class="nav-right">
+          <a href="matches.html">Matches</a>
+        </div>
+      </nav>
+    </header>
     <main class="page">
       <p class="top-text">Your filters found me</p>
 
@@ -64,5 +82,26 @@
 
       <button class="btn">SEND ME A MESSAGE</button>
     </main>
+    <footer class="about-footer">
+      <div class="footer-left">
+        <img src="images/heromatch.png" alt="Match logo" class="footer-logo" />
+
+        <div class="socials">
+          <a href="#"
+            ><img src="images/Vectorfacebook.svg" alt="Facebook" class="fb"
+          /></a>
+          <a href="#"
+            ><img src="images/Vektorinsta.svg" alt="Instagram" class="insta"
+          /></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h3>More</h3>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="matches.html">Matches</a>
+      </div>
+    </footer>
   </body>
 </html>
