@@ -7,7 +7,6 @@
 body {
   background-color: #f8f6f3;
   color: #111;
-  font-family: "Antic Didone", serif;
 }
 
 .page {
@@ -20,13 +19,16 @@ body {
 .top-text {
   font-size: 28px;
   margin-bottom: 20px;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 
 .title {
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 40px;
+  font-family: "Antic Didone";
 }
 
 .profile {
@@ -57,13 +59,16 @@ body {
 
 .name {
   font-size: 72px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 10px;
+  font-family: "Antic Didone";
 }
 
 .text {
   font-size: 30px;
   margin-bottom: 20px;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 
 .tags {
@@ -78,6 +83,7 @@ body {
   padding: 10px 18px;
   font-size: 22px;
   background-color: white;
+  font-family: "Roboto";
 }
 
 .details {
@@ -91,6 +97,8 @@ body {
 .details-title {
   font-size: 24px;
   margin-bottom: 30px;
+  font-family: "Roboto";
+  font-weight: 800;
 }
 
 .grid {
@@ -101,13 +109,16 @@ body {
 
 .label {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 8px;
+  font-family: "Roboto";
 }
 
 .value {
   font-size: 30px;
   text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 200;
 }
 
 .btn {
@@ -120,10 +131,13 @@ body {
   border-radius: 16px;
   font-size: 24px;
   cursor: pointer;
+  font-family: "Roboto";
 }
 
 .btn:hover {
   opacity: 0.9;
+  transform: scale(105%);
+  transition: 0.3s;
 }
 
 .header-matches {
