@@ -72,7 +72,7 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-img {
+img:not(.nav-logo, .footer-logo, .fb, .insta) {
   max-width: 50%;
   border-radius: 50%;
   margin: 0 auto;
@@ -135,4 +135,10 @@ h3 {
   margin: 0 0 1em 1.5em;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.header-matches {
+  background-color: #e5b0bc;
+  color: #fff;
+  padding: 0 2em 1.5em 2em;
 }
