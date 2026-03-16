@@ -32,14 +32,14 @@ function buildFilterUI() {
   <div class="filter-group">
       <button class="filter-toggle" data-group="eyeColor">Eye color ▾</button>
       <div class="filter-dropdown hidden" id="dropdown-eyeColor">
-        ${["brown", "blue", "green", "gray", "hazel", "amber"].map((color) => `<button class="filter-option" data-type="eyeColor" data-value="${color}">${color}</button>`).join("")}
+        ${["Brown", "Blue", "Green", "Gray", "Hazel", "Amber"].map((color) => `<button class="filter-option" data-type="eyeColor" data-value="${color}">${color}</button>`).join("")}
       </div>
     </div>
 
     <div class="filter-group">
       <button class="filter-toggle" data-group="hairColor">Hair Color ▾</button>
       <div class="filter-dropdown hidden" id="dropdown-hairColor">
-        ${["black", "brown", "blonde", "red", "gray", "white", "purple", "green", "blue"].map((color) => `<button class="filter-option" data-type="hairColor" data-value="${color}">${color}</button>`).join("")}
+        ${["Black", "Brown", "Blonde", "Red", "Gray", "White", "Purple", "Green", "Blue"].map((color) => `<button class="filter-option" data-type="hairColor" data-value="${color}">${color}</button>`).join("")}
       </div>
     </div>
 
@@ -97,11 +97,11 @@ function applyFilters() {
   let filtered = allPeople;
 
   if (activeFilters.eyeColor) {
-    filtered = filtered.filter((p) => p.eyeColor?.toLowerCase() === activeFilters.eyeColor);
+    filtered = filtered.filter((p) => p.eyeColor === activeFilters.eyeColor);
   }
 
   if (activeFilters.hairColor) {
-    filtered = filtered.filter((p) => p.hair?.color?.toLowerCase() === activeFilters.hairColor);
+    filtered = filtered.filter((p) => p.hair?.color === activeFilters.hairColor);
   }
 
   if (activeFilters.ageRange) {
