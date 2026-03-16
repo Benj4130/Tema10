@@ -22,7 +22,7 @@ function showPeople(peoplearr) {
             <h3>${people.firstName} ${people.lastName}</h3>
             <p class="age">${people.age} years old</p>
             <p class="location">${people.address.state}</p>
-            <a class="btn" href="profile.html">Wanna match?</a>
+            <a class="btn" href="profile.html?id=${people.id}">Wanna match?</a>
           </div>
         </div>`;
   });
