@@ -3,7 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Match - Profile</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+
+    <script src="js/profile.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="page">
+      <p class="top-text">Your filters found me</p>
+
+      <h1 class="title">Time to talk,<br />what are you waiting for?</h1>
+
+      <section class="profile">
+        <div class="image-box">
+          <img id="user-image" class="image" src="" alt="Profile image" />
+        </div>
+
+        <div class="info">
+          <h2 id="user-name" class="name"></h2>
+          <p id="user-age-city" class="text"></p>
+
+          <div class="tags">
+            <span id="tag-eye" class="tag">Eye color</span>
+            <span id="tag-hair-type" class="tag">Hair type</span>
+            <span id="tag-hair-color" class="tag">Hair color</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="details">
+        <h3 class="details-title">More details</h3>
+
+        <div class="grid">
+          <div class="item">
+            <p class="label">HEIGHT</p>
+            <p id="user-height" class="value"></p>
+          </div>
+
+          <div class="item">
+            <p class="label">HAIR TYPE</p>
+            <p id="user-hair-type" class="value"></p>
+          </div>
+
+          <div class="item">
+            <p class="label">WORK</p>
+            <p id="user-work" class="value"></p>
+          </div>
+
+          <div class="item">
+            <p class="label">EYE COLOR</p>
+            <p id="user-eye" class="value"></p>
+          </div>
+        </div>
+      </section>
+
+      <button class="btn">SEND ME A MESSAGE</button>
+    </main>
+  </body>
 </html>
