@@ -125,3 +125,9 @@ body {
 .btn:hover {
   opacity: 0.9;
 }
+
+.header-matches {
+  background-color: #e5b0bc;
+  color: #fff;
+  padding: 0 2em 1.5em 2em;
+}
