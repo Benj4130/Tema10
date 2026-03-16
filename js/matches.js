@@ -39,7 +39,7 @@ function buildFilterUI() {
     <div class="filter-group">
       <button class="filter-toggle" data-group="hairColor">Hair Color ▾</button>
       <div class="filter-dropdown hidden" id="dropdown-hairColor">
-        ${["black", "brown", "blonde", "red", "gray", "white"].map((color) => `<button class="filter-option" data-type="hairColor" data-value="${color}">${color}</button>`).join("")}
+        ${["black", "brown", "blonde", "red", "gray", "white", "purple", "green", "blue"].map((color) => `<button class="filter-option" data-type="hairColor" data-value="${color}">${color}</button>`).join("")}
       </div>
     </div>
 
