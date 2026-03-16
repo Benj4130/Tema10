@@ -34,29 +34,3 @@
   gap: 0.8rem;
   white-space: nowrap;
 }
-
-.footer-logo {
-  width: 315px;
-  height: auto;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  margin-top: -4px;
-}
-
-.social-link {
-  color: var(--white);
-  font-size: 4.2rem;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.social-icon-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
