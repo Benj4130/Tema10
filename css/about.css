@@ -61,6 +61,7 @@ body {
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.2px;
+  font-family: "Roboto";
 }
 
 .nav-logo {
@@ -107,7 +108,7 @@ body {
 }
 
 .hero-content h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Antic Didone";
   font-weight: 700;
   font-size: clamp(13rem, 11vw, 12.5rem);
   line-height: 1;
@@ -122,6 +123,7 @@ body {
   color: #fff;
   font-weight: 400;
   transform: translateX(180px);
+  font-family: "Roboto";
 }
 
 .about-section,
@@ -195,6 +197,11 @@ body {
 .section-title.underline {
   position: relative;
   display: inline-block;
+  font-family: "Antic Didone";
+}
+
+p {
+  font-family: "Roboto";
 }
 
 .section-title.underline::after {
@@ -244,7 +251,7 @@ body {
 }
 
 .team-text h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Antic Didone";
   font-size: clamp(2.8rem, 5vw, 4.8rem);
   font-weight: 400;
   line-height: 0.95;
@@ -257,6 +264,7 @@ body {
   font-size: 0.92rem;
   line-height: 1.9;
   color: #111;
+  font-family: "Roboto";
 }
 
 .about-footer {
@@ -297,7 +305,7 @@ body {
   color: #fff;
   font-size: 2.1rem;
   margin-bottom: 8px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Antic Didone";
 }
 
 .footer-right a {
@@ -305,6 +313,7 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
   margin-bottom: 4px;
+  font-family: "Roboto";
 }
 
 @media (max-width: 600px) {
