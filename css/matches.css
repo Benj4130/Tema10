@@ -32,13 +32,13 @@ p {
   font-weight: 300;
 }
 
-.filters {
+/* .filters {
   display: flex;
   justify-content: space-around;
   margin: 3em 0;
   font-family: "Roboto";
   font-weight: 500;
-}
+} */
 
 .filter1,
 .filter2 {
@@ -150,6 +150,100 @@ h3 {
   background-color: #e5b0bc;
   color: #fff;
   padding: 0 2em 1.5em 2em;
+}
+
+.filters {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.filter-group {
+  position: relative;
+}
+
+.filter-toggle {
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background: #fff;
+  font-family: "Roboto";
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.filter-toggle:hover {
+  background: #1a1a1a;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  z-index: 100;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown.hidden {
+  display: none;
+}
+
+.filter-option {
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 6px;
+  background: #f8f6f3;
+  cursor: pointer;
+  font-family: "Roboto";
+  text-align: left;
+}
+
+.filter-option:hover {
+  background: #eee;
+}
+
+.filter-option.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.filter-reset {
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  border: 2px solid #e5b0bc;
+  background: #fff;
+  color: #c0606e;
+  font-family: "Roboto";
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.filter-reset:hover {
+  background: #e5b0bc;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2em;
+  color: #999;
+  padding: 3em;
 }
 
 @media (width >= 800px) {
