@@ -118,7 +118,7 @@ function applyFilters() {
 
 function showPeople(peoplearr) {
   if (peoplearr.length === 0) {
-    peopleContainer.innerHTML = `<p class="no-results">Ingen matcher fundet. Prøv et andet filter.</p>`;
+    peopleContainer.innerHTML = `<p class="no-results">No matches found :( Try different filters.</p>`;
     return;
   }
 
