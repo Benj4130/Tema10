@@ -12,19 +12,15 @@ fetch(`https://dummyjson.com/users/${userId}`)
 function showUser(user) {
   document.querySelector("#user-image").src = user.image;
 
-  document.querySelector("#user-name").textContent =
-    user.firstName + " " + user.lastName;
+  document.querySelector("#user-name").textContent = user.firstName + " " + user.lastName;
 
-  document.querySelector("#user-age-city").textContent =
-    user.age + " years old in " + user.address.state;
+  document.querySelector("#user-age-city").textContent = user.age + " years old in " + user.address.state;
 
   document.querySelector("#tag-eye").textContent = user.eyeColor + " eyes";
 
-  document.querySelector("#tag-hair-type").textContent =
-    user.hair.type + " hair";
+  document.querySelector("#tag-hair-type").textContent = user.hair.type + " hair";
 
-  document.querySelector("#tag-hair-color").textContent =
-    user.hair.color + " hair";
+  document.querySelector("#tag-hair-color").textContent = user.hair.color + " hair";
 
   document.querySelector("#user-height").textContent = user.height + " cm";
 

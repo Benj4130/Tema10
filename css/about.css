@@ -70,6 +70,11 @@ body {
   transform: translateY(0);
 }
 
+.nav-logo:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
 .hero-bg-logo {
   position: absolute;
   inset: 0;
@@ -254,7 +259,6 @@ body {
   color: #111;
 }
 
-/* FOOTER */
 .about-footer {
   background-color: #aebfd6;
   padding: 24px 28px 18px;
@@ -265,21 +269,21 @@ body {
 }
 
 .footer-logo {
-  width: 95px;
+  width: 30%;
   height: auto;
   display: block;
 }
 
 .socials {
   display: flex;
-  gap: 12px;
+  gap: 42px;
   margin-top: 14px;
   margin-left: 2.5em;
 }
 
 .socials img {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   display: block;
 }
 
