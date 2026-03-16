@@ -274,11 +274,12 @@ body {
   display: flex;
   gap: 12px;
   margin-top: 14px;
+  margin-left: 2.5em;
 }
 
 .socials img {
-  width: 18px;
-  height: 18px;
+  width: 50%;
+  height: 50%;
   display: block;
 }
 
