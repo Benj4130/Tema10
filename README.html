@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="teknisk-dokumentation-for-tema-8-gruppeprojekt">Teknisk dokumentation for Tema 8 gruppeprojekt</h1>
+<p>Når man er flere der bidrager til en kodebase, lærer man hurtigt, at ens sædvanlige måder at gøre tingene på ikke nødvendigvis er logisk for alle.</p>
+<p>Skriv derfor jeres fælles retningslinjer for punkterne herunder(tilføj gerne flere selv), sådan som det giver bedst mening for jer som gruppe. Dokumentationen sikre, at jeres fælles kodebase forbliver overskuelig, er let at arbejde med og til at forstå for alle, og at I undgå konflikter, og har nemmere ved at hjælpe hinanden undervejs.</p>
+<h2 id="projektstruktur">Projektstruktur:</h2>
+<p>Beslut, hvordan I vil organisere jeres projekt – struktur for mapper og filer.</p>
+<h2 id="hvordan-organiserer-i-billeder-fonte-og-andre-ressourcer">- Hvordan organiserer I billeder, fonte og andre ressourcer?</h2>
+<p>Vi har organiseret vores assets i separate mapper. Billeder ligger i /images, CSS i /css og JavaScript i /js. Dette gør det nemt at finde og arbejde med filer.</p>
+<h2 id="hvor-placerer-i-boilerplatefx-css--og-javascript-filer-der-bruges-p%C3%A5-tv%C3%A6rs-af-projektet">- Hvor placerer I boilerplate?(fx CSS- og JavaScript-filer, der bruges på tværs af projektet)</h2>
+<p>Boilerplate ligger i vores globale CSS filer (fx style.css) og fælles JavaScript funktioner i JS filer, som kan bruges på tværs af sider.</p>
+<h2 id="hvor-placerer-i-html-css--og-javascript-filer-til-fx-detaljevisning-og-listevisning">- Hvor placerer I HTML, CSS- og JavaScript-filer til fx detaljevisning og listevisning?</h2>
+<p>HTML filer ligger i roden (index, matches, profile, about). CSS og JavaScript er opdelt i mapper og navngivet efter siden, fx matches.js og profile.js.</p>
+<h2 id="navngivning">Navngivning:</h2>
+<p>Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktur og undgå forvirring.</p>
+<h2 id="hvordan-navngiver-i-filnavne-fx-sm%C3%A5-bogstaver-ingen-mellemrum-brug-af-eller">- Hvordan navngiver I filnavne? (fx små bogstaver, ingen mellemrum, brug af eller _)</h2>
+<p>Vi bruger små bogstaver, ingen mellemrum og bindestreg (-). Eksempel: matches.html.</p>
+<h2 id="hvordan-sikre-i-at-det-er-til-at-forst%C3%A5-hvilke-html--css--og-javascript-filer-der-h%C3%B8re-sammen">- Hvordan sikre I at det er til at forstå hvilke HTML-, CSS- og JavaScript-filer der høre sammen?</h2>
+<p>Vi bruger samme navn på filer, så det er nemt at se sammenhængen, fx matches.html, matches.js og matches.css.</p>
+<h2 id="link-til-scripts">Link til scripts:</h2>
+<h2 id="hvor-placerer-i-script-referencer-i-htmlen-fx-i-head-med-defer-attribute-eller-sidst-i-body">- Hvor placerer I script referencer i HTML'en? (fx i <head> med defer attribute, eller sidst i <body>)</h2>
+<p>Vi placerer scripts i <head> med defer, så HTML loader først og JavaScript kører bagefter.</p>
+<h2 id="git-branches">Git branches:</h2>
+<h2 id="hvordan-navngiver-i-branches-s%C3%A5-alle-kan-forst%C3%A5r-hvem-der-arbejder-i-branchen-og-p%C3%A5-hvadfx-feature-lotte-formular">- Hvordan navngiver I branches, så alle kan forstår hvem der arbejder i branchen og på hvad?(fx feature-lotte-formular)</h2>
+<p>Vi navngiver branches efter funktion, fx feature-filter, feature-profile eller fix-bug, så det er tydeligt hvad der arbejdes på.</p>
+<h2 id="arbejdsflow">Arbejdsflow:</h2>
+<h2 id="hvordan-fordeler-i-arbejdet-s%C3%A5-i-undg%C3%A5r-at-flere-arbejder-i-de-samme-filer-samtidigt">- Hvordan fordeler I arbejdet, så I undgår at flere arbejder i de samme filer samtidigt?</h2>
+<p>Vi fordeler opgaver via Trello og sørger for at én arbejder på én feature ad gangen.</p>
+<h2 id="hvordan-sikrer-i-at-commit-beskeder-er-beskrivende">- Hvordan sikrer I, at commit-beskeder er beskrivende?</h2>
+<p>Vi skriver korte og klare commit-beskeder, fx &quot;lavet filter funktion&quot;.</p>
+<h2 id="hvordan-kommunikerer-i-om-%C3%A6ndringer-i-main-branchen-n%C3%A5r-feature-merges">- Hvordan kommunikerer i om ændringer i main branchen når feature merges?</h2>
+<p>Vi giver besked til gruppen, når noget er merged til main, så alle er opdateret.</p>
+<h2 id="kode">Kode:</h2>
+<h2 id="hvordan-skriver-i-funktioner-i-javascriptfx-med-function-keyword-eller-som-arrow-functions">- Hvordan skriver i funktioner i JavaScript?(fx med function keyword eller som arrow functions)</h2>
+<p>Vi bruger almindelige functions (function keyword), så det er nemt at læse.</p>
+<h2 id="beslut-hvilken-css-selector-i-benyttes-til-referener-i-henholdsvis-css-og-javascriptfx-ider-til-javascript-og-classes-til-css">- Beslut hvilken CSS selector i benyttes til referener i henholdsvis CSS og JavaScript(fx. id'er til JavaScript og Classes til CSS)</h2>
+<p>JavaScript(fx. id'er til JavaScript og Classes til CSS)
+Vi bruger classes til CSS og querySelector i JavaScript til at hente elementer.</p>
+<h2 id="skal-filer-have-korte-forklaringer-som-kommentarer">- Skal filer have korte forklaringer som kommentarer?</h2>
+<p>Ja, vi skriver korte kommentarer hvor det er nødvendigt for at gøre koden nemmere at forstå.</p>
+<h1 id="funktionalitet">Funktionalitet</h1>
+<p>Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:</p>
+<h2 id="hentning-af-produkter-fra-api">- Hentning af produkter fra API.</h2>
+<p>Vi henter brugere fra DummyJSON API ved hjælp af fetch.</p>
+<h2 id="filtrering-af-produkter-baseret-p%C3%A5-brugerens-valg">- Filtrering af produkter baseret på brugerens valg.</h2>
+<p>Brugeren kan filtrere profiler baseret på køn, alder, hårfarve og øjenfarve.</p>
+<h2 id="dynamisk-visning-af-produkter-i-html">- Dynamisk visning af produkter i HTML.</h2>
+<p>Data fra API vises dynamisk som kort på siden via JavaScript.</p>
+<h1 id="api-endpoints">API endpoints</h1>
+<p>Dette afsnit skal liste de endpoints fra API'et i har benyttet:</p>
+<ul>
+<li>
+<p>https://dummyjson.com/users</p>
+</li>
+<li>
+<p>https://dummyjson.com/users/{id}</p>
+</li>
+</ul>
+<h1 id="dokumentation-af-funktion">Dokumentation af Funktion</h1>
+<p>Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:</p>
+<h2 id="beskrivelse-hvad-g%C3%B8r-funktionen-hvordan-spiller-den-sammen-med-resten-af-koden">- Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?</h2>
+<p>Funktionen <code>applyFilters()</code> filtrerer alle brugere ud fra de filtre, brugeren har valgt, som fx køn, øjenfarve, hårfarve og alder. Funktionen arbejder sammen med <code>buildFilterUI()</code>, hvor filtrene vælges, og med <code>showPeople()</code>, som viser de filtrerede profiler på siden.</p>
+<h2 id="parametre-hvilke-input-forventes-fx-en-v%C3%A6rdi-fra-en-dropdown-eller-urlen">- Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?</h2>
+<p>Funktionen tager ikke parametre direkte, men bruger de globale variabler <code>allPeople</code> og <code>activeFilters</code>. <code>allPeople</code> indeholder alle brugere fra API’et, og <code>activeFilters</code> indeholder de filtre, brugeren har valgt.</p>
+<h2 id="returnerer-beskriv-om-funktionen-returnerer-en-v%C3%A6rdi-eller-blot-manipulerer-domen">- Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.</h2>
+<p>Funktionen returnerer ikke en værdi. Den filtrerer data og sender resultatet videre til <code>showPeople()</code>, som opdaterer HTML’en.</p>
+<h2 id="eksempel-p%C3%A5-brug-inds%C3%A6t-funktions-koden-herunderder-hvor-koden-er-i-eksemplet-og-vis-hvordan-funktionen-kaldes">- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:</h2>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">applyFilters</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> filtered = allPeople;
+
+  <span class="hljs-keyword">if</span> (activeFilters.eyeColor) {
+    filtered = filtered.filter(<span class="hljs-function">(<span class="hljs-params">p</span>) =&gt;</span> p.eyeColor?.toLowerCase() === activeFilters.eyeColor);
+  }
+
+  <span class="hljs-keyword">if</span> (activeFilters.hairColor) {
+    filtered = filtered.filter(<span class="hljs-function">(<span class="hljs-params">p</span>) =&gt;</span> p.hair?.color?.toLowerCase() === activeFilters.hairColor);
+  }
+
+  <span class="hljs-keyword">if</span> (activeFilters.ageRange) {
+    <span class="hljs-keyword">const</span> [min, max] = activeFilters.ageRange.split(<span class="hljs-string">"-"</span>).map(<span class="hljs-built_in">Number</span>);
+    filtered = filtered.filter(<span class="hljs-function">(<span class="hljs-params">p</span>) =&gt;</span> p.age &gt;= min &amp;&amp; p.age &lt;= max);
+  }
+
+  <span class="hljs-keyword">if</span> (activeFilters.gender) {
+    filtered = filtered.filter(<span class="hljs-function">(<span class="hljs-params">p</span>) =&gt;</span> p.gender === activeFilters.gender);
+  }
+
+  showPeople(filtered);
+}
+
+<span class="hljs-comment">// hvordan funktionen bruges:</span>
+applyFilters();
+</div></code></pre>
+
+</body>
+</html>
